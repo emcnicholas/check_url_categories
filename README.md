@@ -58,6 +58,48 @@ python check.py
 
 1. Clone this repository.
 
-```bash
+  ```bash
+  git clone https://github.com/emcnicholas/check_url_categories.git
+  ```
 
-```
+2. Create and activate a Python virtual environment.
+
+   - Mac
+     ```python
+     python3 -m venv myenv
+     source myenv/bin/activate
+     ```
+   - Windows
+
+     ```python
+     python -m venv myenv
+     myenv\Scripts\activate
+     ```
+    
+3. Install requirements.
+
+  ```python
+  pip install -r requirements.txt
+  ```
+
+4. Set the `INVESTIGATE_ACCESS_TOKEN` environment variable.
+
+  ```bash
+  export INVESTIGATE_ACCESS_TOKEN=<<<YOUR_TOKEN>>>
+  ```
+
+5. Create or upload a file named `url.xlsx`. This file must have a URL and Category column.
+
+  ![url.xlsx](images/url1.png)
+
+6. Run the Python script.
+
+  ```bash
+  python check.py
+  ```
+
+7. The category column will now be populated with the Domain/URL category.
+
+![url.xlsx](images/url2.png)
+
+
